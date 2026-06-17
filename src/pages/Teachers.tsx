@@ -2,6 +2,7 @@ import { useState } from "react";
 import { GraduationCap, Award, BookOpen, Users, X } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { AnimatePresence, motion } from "framer-motion";
+import { Highlighter } from "@/components/ui/highlighter"
 
 // Import teacher images
 import skepariotisImg from "@/assets/blank.jpg";
@@ -130,7 +131,20 @@ const Teachers = () => {
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-5xl font-bold mb-6">Οι Καθηγητές μας</h1>
             <p className="text-xl text-white/90 leading-relaxed">
-              Έμπειροι επαγγελματίες με πάθος για τη διδασκαλία και την επιτυχία των μαθητών
+              <Highlighter
+                action="underline"
+                color="orange"
+                strokeWidth={3}
+                animationDuration={1000}
+                iterations={2}
+                padding={0}
+                multiline={true}
+                isView={true}
+                delay={1000}
+                animate={true}
+              >
+                Έμπειροι επαγγελματίες με πάθος για τη διδασκαλία και την επιτυχία των μαθητών
+              </Highlighter>
             </p>
           </div>
         </div>

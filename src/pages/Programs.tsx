@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import styled from 'styled-components';
 import { Highlighter } from "@/components/ui/highlighter"
+import SplitText from "@/components/ui/split-text";
 
 const GlassRadioGroup = ({ options, value, onValueChange, name }) => {
   const selectedIndex = options.findIndex(opt => opt.value === value);
@@ -537,7 +538,16 @@ const Programs = () => {
       <section className="bg-hero-gradient text-white pt-32 pb-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-5xl font-bold mb-6">Τα Προγράμματά μας</h1>
+            <h1 className="text-5xl font-bold mb-6">
+              <SplitText
+                text="Τα Προγράμματά μας"
+                splitType="words, chars"
+                duration={1}
+                delay={50}
+                from={{ opacity: 0, y: 40 }}
+                to={{ opacity: 1, y: 0 }}
+              />
+            </h1>
             <p className="text-xl text-white/90 leading-relaxed">
               <Highlighter
                 action="underline"

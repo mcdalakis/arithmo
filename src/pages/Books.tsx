@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import book1 from "@/assets/Physics_Book.jpg";
 import book2 from "@/assets/Essay_Book.jpg";
 import allbooks from "@/assets/All_Books.jpg";
+import { Highlighter } from "@/components/ui/highlighter"
 
 
 
@@ -57,7 +58,20 @@ const Books = () => {
             <Book className="mb-12" />
             <h1 className="text-5xl font-bold mb-6">Τα Βιβλία μας</h1>
             <p className="text-xl text-white/90 leading-relaxed">
-              Εκπαιδευτικό υλικό υψηλής ποιότητας για όλες τις τάξεις
+              <Highlighter
+                action="underline"
+                color="orange"
+                strokeWidth={3}
+                animationDuration={1000}
+                iterations={2}
+                padding={0}
+                multiline={true}
+                isView={true}
+                delay={1000}
+                animate={true}
+              >
+                Εκπαιδευτικό υλικό υψηλής ποιότητας για όλες τις τάξεις
+              </Highlighter>
             </p>
           </div>
         </div>

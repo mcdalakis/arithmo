@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
 import { toast } from "sonner";
+import { Highlighter } from "@/components/ui/highlighter"
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
@@ -76,7 +77,20 @@ const Contact = () => {
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-5xl font-bold mb-6">Επικοινωνήστε Μαζί μας</h1>
             <p className="text-xl text-white/90 leading-relaxed">
-              Είμαστε εδώ να απαντήσουμε σε κάθε σας ερώτηση και να σας βοηθήσουμε
+              <Highlighter
+                action="underline"
+                color="orange"
+                strokeWidth={3}
+                animationDuration={1000}
+                iterations={2}
+                padding={0}
+                multiline={true}
+                isView={true}
+                delay={1000}
+                animate={true}
+              >
+                Είμαστε εδώ να απαντήσουμε σε κάθε σας ερώτηση και να σας βοηθήσουμε
+              </Highlighter>
             </p>
           </div>
         </div>
