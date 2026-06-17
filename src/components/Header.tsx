@@ -60,7 +60,7 @@ const Header = () => {
         borderRadius: isMenuOpen ? "24px" : "32px",
       }}
       transition={{ duration: 0.5, ease: [0.32, 0.72, 0, 1] }}
-      className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-8xl border border-white/20 bg-white/100 backdrop-blur-xl shadow-lg overflow-hidden"
+      className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-8xl border border-white/20 bg-white/75 backdrop-blur-xl shadow-lg overflow-hidden"
     >
       <div className="px-6">
         <div className="flex items-center justify-between h-16">
