@@ -1,14 +1,15 @@
 {
-  "name": "vite_react_shadcn_ts",
+  "name": "arithmo",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "homepage": "https://mcdalakis.github.io/arithmo/",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",

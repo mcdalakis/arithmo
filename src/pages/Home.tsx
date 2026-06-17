@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import styled from 'styled-components';
 import { useState, useEffect } from 'react';
 import { Highlighter } from "@/components/ui/highlighter"
-{/*test*/ }
 
 interface TypingAnimationProps {
   text: string;
