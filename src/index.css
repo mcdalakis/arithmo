@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 220 25% 97%;
+    --foreground: 225 25% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 225 25% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 225 25% 12%;
+
+    --primary: 225 60% 15%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 15% 93%;
+    --secondary-foreground: 225 25% 12%;
+
+    --muted: 220 15% 93%;
+    --muted-foreground: 225 15% 45%;
+
+    --accent: 25 95% 53%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 88%;
+    --input: 220 15% 88%;
+    --ring: 25 95% 53%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens for educational theme */
+    --hero-gradient-start: 225 60% 15%;
+    --hero-gradient-end: 235 50% 25%;
+    --accent-glow: 25 95% 53%;
+    
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 225 30% 8%;
+    --foreground: 220 15% 95%;
+
+    --card: 225 25% 12%;
+    --card-foreground: 220 15% 95%;
+
+    --popover: 225 25% 12%;
+    --popover-foreground: 220 15% 95%;
+
+    --primary: 220 15% 95%;
+    --primary-foreground: 225 60% 15%;
+
+    --secondary: 225 20% 18%;
+    --secondary-foreground: 220 15% 95%;
+
+    --muted: 225 20% 18%;
+    --muted-foreground: 220 10% 60%;
+
+    --accent: 25 95% 53%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 225 20% 18%;
+    --input: 225 20% 18%;
+    --ring: 25 95% 53%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+}
