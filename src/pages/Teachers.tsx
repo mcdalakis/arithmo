@@ -155,7 +155,7 @@ const Teachers = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-primary mb-6">Διεύθυνση Σπουδών</h2>
-            <div className="bg-secondary/30 rounded-lg p-8 mb-8">
+            <div className="bg-secondary/100 rounded-lg p-8 mb-8">
               <p className="text-lg font-semibold text-primary mb-2">Σκεπαριώτης Νίκος - Φυσικός</p>
               <p className="text-lg font-semibold text-primary">Βρακά Λία - Φυσικός/Ηλεκτρονικός</p>
             </div>
@@ -173,7 +173,7 @@ const Teachers = () => {
       </section>
 
       {/* Qualities */}
-      <section className="py-20 bg-secondary/30">
+      <section className="py-20 bg-secondary/100">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-primary mb-4 text-center">
             Τα Προσόντα των Καθηγητών μας
@@ -257,7 +257,7 @@ const Teachers = () => {
       </section>
 
       {/* Collaboration */}
-      <section className="py-20 bg-secondary/30">
+      <section className="py-20 bg-secondary/100">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-primary mb-6">
