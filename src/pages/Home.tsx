@@ -38,7 +38,7 @@ const TypingAnimation: React.FC<TypingAnimationProps> = ({ text, speed = 60, cla
     <span className={className}>
       {displayedText}
       {!disabled && currentIndex < text.length && (
-        <span className="animate-pulse ml-1">|</span>
+        <span className="animate-pulse" style={{ position: 'absolute' }}>|</span>
       )}
     </span>
   );
@@ -394,7 +394,7 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-hero-gradient text-white overflow-hidden">
+      <section className="relative bg-hero-gradient text-white overflow-hidden ">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 right-20 w-64 h-64 bg-accent rounded-full blur-3xl animate-float"></div>
           <div className="absolute bottom-20 left-20 w-96 h-96 bg-accent rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
@@ -403,16 +403,24 @@ const Home = () => {
         <div className="container mx-auto px-4 py-32 relative z-10">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="max-w-3xl animate-fade-in">
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-                <TypingAnimation text="Αριθμούμε Επιτυχίες με Σεβασμό στον Μαθητή"
-                  onComplete={() => setIsFirstLineComplete(true)}
-                  disabled={DISABLE_TYPING_ANIMATION}
-                />
-                {isFirstLineComplete && (
-                  <span className="block text-accent mt-2">
-                    <TypingAnimation text="- στην Μαθήτρια" disabled={DISABLE_TYPING_ANIMATION} />
-                  </span>
-                )}
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight relative">
+                {/* Invisible full text to permanently reserve space */}
+                <span className="invisible" aria-hidden="true">
+                  Αριθμούμε Επιτυχίες με Σεβασμό στον Μαθητή
+                  <span className="block text-accent mt-2">- στην Μαθήτρια</span>
+                </span>
+                {/* Visible animated text layered on top */}
+                <span className="absolute inset-0">
+                  <TypingAnimation text="Αριθμούμε Επιτυχίες με Σεβασμό στον Μαθητή"
+                    onComplete={() => setIsFirstLineComplete(true)}
+                    disabled={DISABLE_TYPING_ANIMATION}
+                  />
+                  {isFirstLineComplete && (
+                    <span className="block text-accent mt-2">
+                      <TypingAnimation text="- στην Μαθήτρια" disabled={DISABLE_TYPING_ANIMATION} />
+                    </span>
+                  )}
+                </span>
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-white/90 leading-relaxed">
                 <Highlighter
